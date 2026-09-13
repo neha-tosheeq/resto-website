@@ -7,13 +7,15 @@ if (!isset($_SESSION['user_email'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Velvet Bite - Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
 
     <!-- Navbar ko yahan sabse upar rakho -->
@@ -26,10 +28,10 @@ if (!isset($_SESSION['user_email'])) {
             <p class="hero-subtext">STREET FOOD</p>
         </div>
     </div>
-    
+
     <!-- Logo Section -->
     <div class="logo-container-white">
-        <img src="imges/logo2.png" alt="Restaurant Logo">
+        <img src="../imges/logo2.png" alt="Restaurant Logo">
     </div>
 
     <!-- About Our Restaurant -->
@@ -58,7 +60,7 @@ if (!isset($_SESSION['user_email'])) {
         <!-- Menu Carousel / Slider Wrapper with Left & Right Icons -->
         <div class="menu-slider-wrapper" style="position: relative; display: flex; align-items: center;">
             <button id="slideLeft" style="position: absolute; left: -20px; z-index: 10; background: rgba(229, 89, 14, 0.9); color: white; border: none; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; font-size: 18px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); transition: background 0.3s;"><i class="fa-solid fa-chevron-left"></i></button>
-            
+
             <div id="menuSliderContainer" style="display: flex; gap: 25px; overflow-x: auto; scroll-behavior: smooth; width: 100%; padding: 10px 5px; scrollbar-width: none;">
                 <!-- Item 1 -->
                 <div class="menu-card" style="min-width: 300px; flex: 0 0 auto;">
@@ -133,7 +135,7 @@ if (!isset($_SESSION['user_email'])) {
                 <h2>Our Dining Experience</h2>
                 <div class="title-underline"></div>
                 <p>Step into a warm, modern environment designed for families, friends, and food lovers. Enjoy great music, ambient lighting, and top-notch hospitality while relishing your favorite street snacks in an aesthetic seating area.</p>
-                <a href="resturant.html" class="page-link-btn">Explore Restaurant <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="resturant.php" class="page-link-btn">Explore Restaurant <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="image-content">
                 <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=600&q=80" alt="Dining Interior">
@@ -163,7 +165,7 @@ if (!isset($_SESSION['user_email'])) {
                 <h2>Book a Table</h2>
                 <div class="title-underline"></div>
                 <p>Skip the wait by reserving your table in advance. Whether it's a romantic dinner or a cozy family gathering, we have the perfect spot and pleasant arrangement ready exclusively for you.</p>
-                <a href="booktable.html" class="page-link-btn">Reservation Form <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="booktable.php" class="page-link-btn">Reservation Form <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="image-content">
                 <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Family Table Dining">
@@ -195,12 +197,19 @@ if (!isset($_SESSION['user_email'])) {
     <script>
         const slider = document.getElementById('menuSliderContainer');
         document.getElementById('slideLeft').addEventListener('click', () => {
-            slider.scrollBy({ left: -330, behavior: 'smooth' });
+            slider.scrollBy({
+                left: -330,
+                behavior: 'smooth'
+            });
         });
         document.getElementById('slideRight').addEventListener('click', () => {
-            slider.scrollBy({ left: 330, behavior: 'smooth' });
+            slider.scrollBy({
+                left: 330,
+                behavior: 'smooth'
+            });
         });
     </script>
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
 </body>
+
 </html>

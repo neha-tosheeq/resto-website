@@ -6,8 +6,8 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant - Velvet Bite</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Book a Table - Velvet Bite</title>
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -16,22 +16,22 @@ session_start();
     <?php include 'navbar.php'; ?>
 
     <!-- Page Banner -->
-    <header class="page-banner restaurant-banner">
-        <h1>Our Restaurant Experience</h1>
-        <p>Step inside our cozy ambiance and enjoy top-tier dining</p>
+    <header class="page-banner booking-banner">
+        <h1>Reserve Your Table</h1>
+        <p>Book your spot in advance and secure a wonderful dining experience</p>
     </header>
 
-    <!-- Restaurant Section -->
+    <!-- Booking Section -->
     <div class="content-section-box">
         <div class="container-grid">
             <div class="text-content">
-                <h2>Welcome to Velvet Bite Lounge</h2>
+                <h2>Plan Your Dining Experience</h2>
                 <div class="title-underline"></div>
-                <p>Our restaurant offers a modern yet warm atmosphere designed for family dinners, friendly gatherings, and romantic dates. Experience premium hospitality paired with exceptional food quality.</p>
-                <a href="book_table.php" class="page-link-btn">Book a Table <i class="fa-solid fa-arrow-right"></i></a>
+                <p>Reserve a table for your special moments. Whether it's a cozy corner for two or a large family celebration, we have the perfect seating arrangements ready for you.</p>
+                <a href="#contact" class="page-link-btn">Inquire For Reservation <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="image-content">
-                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Restaurant Interior">
+                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80" alt="Table Reservation">
             </div>
         </div>
     </div>
