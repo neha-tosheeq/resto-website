@@ -1,0 +1,550 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d0d0d;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Header & Navbar */
+.header {
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(imges/1.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(18, 18, 18, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 40px;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links-left {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links-left li {
+    margin-right: 30px;
+}
+
+.nav-links-left li a {
+    text-decoration: none;
+    color: rgb(251, 255, 251);
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links-left li a:hover, .nav-links-left li a.active {
+    color: rgb(229, 89, 14);
+}
+
+.nav-auth-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.login-nav-btn {
+    background-color: transparent;
+    border: 2px solid rgb(229, 89, 14);
+    color: white;
+    padding: 6px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.login-nav-btn:hover {
+    background-color: rgb(229, 89, 14);
+}
+
+.signup-nav-btn {
+    background-color: rgb(229, 89, 14);
+    border: 2px solid rgb(229, 89, 14);
+    color: white;
+    padding: 6px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.signup-nav-btn:hover {
+    background-color: #c44707;
+}
+
+/* Hamburger Menu Toggle Button (Hidden on Desktop) */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hero-text h1 {
+    font-size: 80px;
+    letter-spacing: 10px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.hero-subtext {
+    font-size: 20px;
+    letter-spacing: 7px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    color: #ddd;
+}
+
+.logo-container-white {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.logo-container-white img {
+    width: 220px;
+    height: auto;
+}
+
+/* Sub-Page Banners */
+.sub-page-nav {
+    position: relative !important;
+    background-color: rgba(18, 18, 18, 0.95) !important;
+    border-bottom: 2px solid rgba(255,255,255,0.08);
+}
+
+.page-banner {
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.page-banner::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.page-banner h1, .page-banner p {
+    position: relative;
+    z-index: 2;
+}
+
+.page-banner h1 {
+    font-size: 45px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.menu-banner { background-image: url('https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1200&q=80'); }
+.restaurant-banner { background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80'); }
+.delivery-banner { background-image: url('https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=1200&q=80'); }
+.booking-banner { background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80'); }
+
+/* Container & Grid Section Styling */
+.container-grid {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.reverse-flex {
+    flex-direction: row-reverse;
+}
+
+.text-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.text-content h2 {
+    font-size: 34px;
+    color: white;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.text-content p {
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.title-underline {
+    width: 60px;
+    height: 3px;
+    background-color: rgb(229, 89, 14);
+    margin-bottom: 20px;
+}
+
+.center-line {
+    margin: 0 auto 20px auto;
+}
+
+.section-heading-center {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 35px auto;
+}
+
+.section-heading-center h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Menu Box Container & Full Grid for 15+ Items */
+.menu-boxed-container {
+    background-color: #141414;
+    border: 1px solid rgba(229, 89, 14, 0.2);
+    border-radius: 20px;
+    padding: 50px 40px;
+    max-width: 1250px;
+    margin: 40px auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.menu-grid-full {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.menu-card {
+    background: #1f1f1f;
+    border-radius: 15px;
+    overflow: hidden;
+    padding-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    text-align: left;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    border-color: rgb(229, 89, 14);
+    box-shadow: 0 0 20px rgba(229, 89, 14, 0.5);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+.menu-card:hover img {
+    transform: scale(1.05);
+}
+
+.menu-card h3 {
+    font-size: 17px;
+    margin: 15px 15px 5px 15px;
+    color: #fff;
+}
+
+.price {
+    font-size: 17px;
+    font-weight: bold;
+    color: rgb(229, 89, 14);
+    margin: 0 15px;
+}
+
+.page-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 25px;
+    background-color: transparent;
+    border: 2px solid rgb(229, 89, 14);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.page-link-btn:hover {
+    background-color: rgb(229, 89, 14);
+    transform: translateX(5px);
+}
+
+/* Content Section Boxes */
+.content-section-box {
+    padding: 60px 6%;
+    margin: 40px 10%;
+    max-width: 80%;
+    border-radius: 20px;
+    background-color: #161616;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: all 0.4s ease-in-out;
+}
+
+.content-section-box:hover {
+    transform: translateY(-5px);
+    border-color: rgb(229, 89, 14);
+    box-shadow: 0 0 25px rgba(229, 89, 14, 0.4), 0 10px 35px rgba(0,0,0,0.7);
+}
+
+.image-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.image-content img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.3s ease;
+    cursor: pointer;
+}
+
+.image-content img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 30px rgba(229, 89, 14, 0.7);
+    filter: brightness(1.1);
+}
+
+/* CONTACT US SECTION */
+.contact-outer-white-bg {
+    background-color: #ffffff;
+    padding: 60px 0;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.contact-inner-black-box {
+    background-color: #141414;
+    width: 82%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 50px 40px;
+    text-align: center;
+    border-radius: 25px;
+    border-top: 2px solid rgb(229, 89, 14);
+    border-bottom: 2px solid rgb(229, 89, 14);
+    border-left: 2px solid rgba(229, 89, 14, 0.4);
+    border-right: 2px solid rgba(229, 89, 14, 0.4);
+    box-shadow: 0 14px 30px rgba(229, 89, 14, 0.25);
+    transition: all 0.3s ease;
+}
+
+.contact-inner-black-box:hover {
+    box-shadow: 0 15px 40px rgba(229, 89, 14, 0.35);
+    border-color: rgb(229, 89, 14);
+}
+
+.contact-inner-black-box h2 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 32px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+}
+
+.contact-inner-black-box p {
+    color: #ccc;
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.contact-detailt p {
+    margin: 10px 0;
+    color: #ddd;
+    font-size: 16px;
+}
+
+.contact-detailt i {
+    color: rgb(229, 89, 14);
+    margin-right: 12px;
+}
+
+.social-icons {
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background-color: #1a1a1a;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: rgb(229, 89, 14);
+    border-color: rgb(229, 89, 14);
+}
+
+.copyright {
+    margin-top: 25px;
+    font-size: 15px;
+    color: #777;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 20px;
+    text-align: center;
+}
+
+#order-form-container {
+    display: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE MEDIA QUERIES FOR MOBILE & TABLETS (Max-width: 768px)
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+    /* Navbar styling for mobile: Show hamburger icon, hide links by default */
+    nav {
+        padding: 15px 20px;
+        justify-content: space-between;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links-left {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(18, 18, 18, 0.98);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 20px 0;
+        text-align: center;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+        border-bottom: 2px solid rgb(229, 89, 14);
+    }
+
+    /* When toggled via JS, active class displays the menu */
+    .nav-links-left.active {
+        display: flex;
+    }
+
+    .nav-links-left li {
+        margin: 12px 0;
+        margin-right: 0;
+    }
+
+    .nav-auth-right {
+        display: none; /* Hide auth buttons on small mobile or can be integrated */
+    }
+
+    /* Hero Text Adjustments (Velvet Bite title scaling) */
+    .hero-text h1 {
+        font-size: 38px !important;
+        letter-spacing: 4px !important;
+        padding: 0 10px;
+    }
+
+    .hero-subtext {
+        font-size: 14px !important;
+        letter-spacing: 2px !important;
+    }
+
+    /* Content Boxes & Layout Grids */
+    .content-section-box {
+        margin: 20px auto !important;
+        max-width: 92% !important;
+        padding: 25px 15px !important;
+    }
+
+    .container-grid {
+        gap: 20px;
+    }
+
+    /* Images fitting */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Menu Grid adjustments */
+    .menu-grid-full {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .menu-boxed-container {
+        padding: 20px 10px;
+        margin: 20px 10px;
+    }
+
+    /* Contact Box */
+    .contact-inner-black-box {
+        width: 95%;
+        padding: 20px 15px;
+    }
+}
